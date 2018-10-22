@@ -13,6 +13,7 @@ import {
   MatMenuModule } from "@angular/material";
 import { HeaderComponent } from './components/header/header.component';
 import { WordItemComponent } from './components/word-item/word-item.component';
+import { WordListComponent } from './components/word-list/word-list.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { ProfileComponent } from './components/profile/profile.component';
     AppComponent,
     HeaderComponent,
     WordItemComponent,
+    WordListComponent,
     ProfileComponent
   ],
   imports: [
