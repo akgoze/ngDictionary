@@ -12,11 +12,13 @@ import {
   MatIconModule,
   MatMenuModule } from "@angular/material";
 import { HeaderComponent } from './components/header/header.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
