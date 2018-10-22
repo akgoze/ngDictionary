@@ -12,12 +12,14 @@ import {
   MatIconModule,
   MatMenuModule } from "@angular/material";
 import { HeaderComponent } from './components/header/header.component';
+import { WordItemComponent } from './components/word-item/word-item.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    WordItemComponent,
     ProfileComponent
   ],
   imports: [
