@@ -16,6 +16,13 @@ import { WordItemComponent } from './components/word-item/word-item.component';
 import { WordListComponent } from './components/word-list/word-list.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
+import { environment } from "../environments/environment";
+
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireStorageModule } from "@angular/fire/storage";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +40,11 @@ import { ProfileComponent } from './components/profile/profile.component';
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
