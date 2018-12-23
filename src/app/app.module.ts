@@ -2,34 +2,33 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { 
-  MatButtonModule, 
-  MatToolbarModule,
-  MatCardModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatIconModule,
-  MatMenuModule } from "@angular/material";
 import { HeaderComponent } from './components/header/header.component';
-import { WordItemComponent } from './components/word-item/word-item.component';
-import { WordListComponent } from './components/word-list/word-list.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { WordItemComponent } from './components/word-item/word-item.component';
+import { WordsComponent } from './components/words/words.component';
+import { WordDetailComponent } from './components/word-detail/word-detail.component';
+import { AddWordComponent } from './components/add-word/add-word.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { environment } from "../environments/environment";
-
-import { AngularFireModule } from "@angular/fire";
-import { AngularFirestoreModule } from "@angular/fire/firestore";
-import { AngularFireStorageModule } from "@angular/fire/storage";
-import { AngularFireAuthModule } from "@angular/fire/auth";
+  import {
+    MatButtonModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule,
+    MatMenuModule
+   } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    ProfileComponent,
     WordItemComponent,
-    WordListComponent,
-    ProfileComponent
+    WordsComponent,
+    WordDetailComponent,
+    AddWordComponent
   ],
   imports: [
     BrowserModule,
@@ -41,10 +40,7 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
     MatFormFieldModule,
     MatIconModule,
     MatMenuModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
-    AngularFireStorageModule,
-    AngularFirestoreModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
