@@ -1,14 +1,16 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <mat-icon>spellcheck</mat-icon>
-    <span>&nbsp;ngDictionary</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button [matMenuTriggerFor]="matMenu">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #matMenu>
-      <button mat-menu-item>My Words</button>
-      <button mat-menu-item>My Profile</button>
-    </mat-menu>
-  </mat-toolbar-row>
-</mat-toolbar>
+    <mat-toolbar-row>
+      <div class="logo" routerLink="/">      
+        <mat-icon>spellcheck</mat-icon>
+        <span>&nbsp;ngDictionary</span>
+      </div>
+      <span class="example-spacer"></span>
+      <button mat-icon-button [matMenuTriggerFor]="matMenu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #matMenu>
+        <button routerLink="word-detail" mat-menu-item>My Words</button>
+        <button routerLink="profile" mat-menu-item>My Profile</button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>

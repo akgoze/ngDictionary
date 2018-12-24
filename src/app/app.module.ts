@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -20,6 +22,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatMenuModule
    } from '@angular/material';
 import { HomeComponent } from './components/home/home.component';
+
+   const appRoutes: Routes = [
+     { path: '', component: HomeComponent },
+     { path: 'profile', component: ProfileComponent },
+     { path: 'word-detail', component: WordDetailComponent},
+     { path: 'add-word', component: AddWordComponent}
+   ];
 
 @NgModule({
   declarations: [
@@ -42,6 +51,10 @@ import { HomeComponent } from './components/home/home.component';
     MatFormFieldModule,
     MatIconModule,
     MatMenuModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true }
+    ),
     BrowserAnimationsModule
   ],
   providers: [],
