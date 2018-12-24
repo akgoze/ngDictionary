@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatIconModule,
     MatMenuModule
    } from '@angular/material';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     WordItemComponent,
     WordsComponent,
     WordDetailComponent,
-    AddWordComponent
+    AddWordComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
