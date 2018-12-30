@@ -1,0 +1,15 @@
+.btn-auto {
+  margin: auto;
+  display: block;
+  width: 88px;
+  height: 88px;
+  position: fixed;
+  bottom: 32px;
+  left: 0;
+  right: 0;
+}
+.btn-auto .mat-icon {
+  font-size: 34px;
+  width: 34px;
+  height: 34px;
+}
