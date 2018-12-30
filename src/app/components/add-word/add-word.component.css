@@ -1,0 +1,22 @@
+.mat-card {
+  margin: 32px 16px;
+  display: block;
+  width: auto;  
+}
+.add-word-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: auto;
+  margin: 0 16px;
+}
+.mat-card-title {
+  margin-bottom: 0;
+  margin-top: 12px;
+}
+.example-full-width {
+  width: 100%;
+} 
+.btn-send { 
+  width: 100%;
+  margin-bottom: 12px;
+}
