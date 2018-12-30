@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AngularFirestore } from "@angular/fire/firestore";
-import { Observable } from "rxjs";
-import { map } from "rxjs/operator/map";
+import { WordService } from './../../services/word.service';
+import { Word } from './../../models/Word';
 
 @Component({
   selector: 'app-word-item',
@@ -9,12 +8,21 @@ import { map } from "rxjs/operator/map";
   styleUrls: ['./word-item.component.css']
 })
 export class WordItemComponent implements OnInit {
-  items: Observable<any>;
-  constructor(private afs:AngularFirestore) { 
-    this.items = afs.collection('words',ref=> ref.orderBy("word_en")).valueChanges();
+  words: Word[];
+
+  constructor(private wordService: WordService) {
   }
 
   ngOnInit() {
+    this.autoRenew();
   }
 
+  autoRenew() {
+    this.wordService.getWords().subscribe(response => {
+      const arrLength = response.length;
+      const randNumber = Math.floor(Math.random() * (0 - arrLength) + arrLength);
+
+      return this.words = Array(response[randNumber]);
+    });
+  }
 }
