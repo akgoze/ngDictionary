@@ -12,6 +12,12 @@ import { WordDetailComponent } from './components/word-detail/word-detail.compon
 import { AddWordComponent } from './components/add-word/add-word.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from './../environments/environment';
+
   import {
     MatButtonModule,
     MatToolbarModule,
@@ -51,9 +57,12 @@ import { HomeComponent } from './components/home/home.component';
     MatFormFieldModule,
     MatIconModule,
     MatMenuModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true }
     ),
     BrowserAnimationsModule
   ],
