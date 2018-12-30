@@ -13,5 +13,10 @@ app-word-item {
 app-word-item .mat-card {
   margin: 16px 0;
 }
+.mat-card-header,
+.mat-card-header .mat-card-header-text {
+  text-align: center;
+  width: 100%;
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
