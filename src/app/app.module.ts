@@ -27,7 +27,8 @@ import { environment } from './../environments/environment';
     MatFormFieldModule,
     MatInputModule,
     MatIconModule,
-    MatMenuModule
+    MatMenuModule,
+    MatListModule
    } from '@angular/material';
 import { HomeComponent } from './components/home/home.component';
 
@@ -55,6 +56,7 @@ import { HomeComponent } from './components/home/home.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatButtonModule,
     MatToolbarModule,
     MatCardModule,
@@ -62,6 +64,7 @@ import { HomeComponent } from './components/home/home.component';
     MatFormFieldModule,
     MatIconModule,
     MatMenuModule,
+    MatListModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireStorageModule,
