@@ -4,21 +4,41 @@
     <mat-card-title>Add new word</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <form class="add-word-form">
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="English">
+    <form class="add-word-form" #addWordForm="ngForm" (ngSubmit)="AddWord(addWordForm)">
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>English</mat-label>
+        <input 
+          matInput
+          type="text"
+          name="wordEng"
+          #addFormWordEng="ngModel"
+          [(ngModel)]="word_en"
+          placeholder="English"
+          required>
       </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Türkçe">
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Türkçe</mat-label>
+        <input 
+          matInput
+          type="text"
+          name="wordTr"
+          #addFormWordTr="ngModel"
+          [(ngModel)]="word_tr"
+          placeholder="Türkçe"
+          required>
       </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Example Sentence">
+      <mat-form-field appearance="outline" class="example-full-width">
+        <input
+        matInput
+        type="text"
+        name="word_sentence"
+        #addFormWordSentence="ngModel"
+        [(ngModel)]="word_sentence"
+        placeholder="Add Sentence"
+        required>
       </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Example Sentence">
-      </mat-form-field>
-      
-        <button mat-raised-button color="primary" class="btn-send">Add New Word</button>
+        <input type="hidden" name="created_date" #addFormWordDate="ngModel" [(ngModel)]="createdDate">
+      <button mat-raised-button color="primary" class="btn-send">Add New Word</button>
     </form>
   </mat-card-content>
 </mat-card>
