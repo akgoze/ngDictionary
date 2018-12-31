@@ -10,6 +10,7 @@ import { WordItemComponent } from './components/word-item/word-item.component';
 import { WordsComponent } from './components/words/words.component';
 import { WordDetailComponent } from './components/word-detail/word-detail.component';
 import { AddWordComponent } from './components/add-word/add-word.component';
+import { AllWordsComponent } from './components/all-words/all-words.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AngularFireModule } from '@angular/fire';
@@ -32,8 +33,9 @@ import { HomeComponent } from './components/home/home.component';
    const appRoutes: Routes = [
      { path: '', component: HomeComponent },
      { path: 'profile', component: ProfileComponent },
-     { path: 'word-detail', component: WordDetailComponent},
-     { path: 'add-word', component: AddWordComponent}
+     { path: 'word-detail', component: WordDetailComponent },
+     { path: 'add-word', component: AddWordComponent },
+     { path: 'all-words', component: AllWordsComponent }
    ];
 
 @NgModule({
@@ -43,9 +45,11 @@ import { HomeComponent } from './components/home/home.component';
     ProfileComponent,
     WordItemComponent,
     WordsComponent,
+    AllWordsComponent,
     WordDetailComponent,
     AddWordComponent,
     HomeComponent
+    AllWordsComponent
   ],
   imports: [
     BrowserModule,

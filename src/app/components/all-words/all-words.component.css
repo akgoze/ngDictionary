@@ -1,0 +1,7 @@
+.mat-list-item .mat-icon {
+  float: right;
+  position: relative;
+  top: -1px;
+  color: darkgrey;
+  margin-left: 10px;
+}
