@@ -29,5 +29,8 @@ export class WordService {
 
     return this.words;
   }
-
+  newWord(word: Word) {
+    this.wordCollection.add(word);
+    console.log(word);
+  }
 }
