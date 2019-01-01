@@ -1,57 +1,12 @@
 <mat-list>
-  <mat-list-item>
-    <h4 mat-line>Word item 2
-      <span class="example-spacer"></span>
-      <mat-icon>close</mat-icon>
-      <mat-icon>edit</mat-icon>
-    </h4>
-  </mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item>
-    <h4 mat-line>Word item 2
-      <span class="example-spacer"></span>
-      <mat-icon>close</mat-icon>
-      <mat-icon>edit</mat-icon>
-    </h4>
-  </mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item>
-    <h4 mat-line>Word item 2
-      <span class="example-spacer"></span>
-      <mat-icon>close</mat-icon>
-      <mat-icon>edit</mat-icon>
-    </h4>
-  </mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item>
-    <h4 mat-line>Word item 2
-      <span class="example-spacer"></span>
-      <mat-icon>close</mat-icon>
-      <mat-icon>edit</mat-icon>
-    </h4>
-  </mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item>
-    <h4 mat-line>Word item 2
-      <span class="example-spacer"></span>
-      <mat-icon>close</mat-icon>
-      <mat-icon>edit</mat-icon>
-    </h4>
-  </mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item>
-    <h4 mat-line>Word item 2
-      <span class="example-spacer"></span>
-      <mat-icon>close</mat-icon>
-      <mat-icon>edit</mat-icon>
-    </h4>
-  </mat-list-item>
-  <mat-divider></mat-divider>
-  <mat-list-item>
-    <h4 mat-line>Word item 2
-      <span class="example-spacer"></span>
-      <mat-icon>close</mat-icon>
-      <mat-icon>edit</mat-icon>
-    </h4>
-  </mat-list-item>
+  <div *ngFor="let word of words">
+    <mat-list-item>
+      <h4 mat-line class="word-item-text">{{word.word_en}} - {{word.word_tr}}
+        <span class="example-spacer"></span>
+        <mat-icon>delete_outline</mat-icon>
+        <mat-icon (click)="showEditWord = !showEditWord">edit_outline</mat-icon>
+      </h4>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </div>
 </mat-list>
