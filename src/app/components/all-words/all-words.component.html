@@ -10,3 +10,51 @@
     <mat-divider></mat-divider>
   </div>
 </mat-list>
+<div class="overlay" *ngIf="showEditWord"></div>
+<mat-card class="modal-edit-words" *ngIf="showEditWord">
+  <mat-card-header class="modal-header">
+    <mat-card-title>Edit word</mat-card-title>
+    <button mat-icon-button class="close-modal" (click)="showEditWord = !showEditWord">
+      <mat-icon aria-label="Close">close</mat-icon>
+    </button>
+  </mat-card-header>
+  {{editwords.word_tr}} - {{editwords.word_en}}
+  <mat-card-content>
+    <form class="edit-word-form" #editWordForm="ngForm" (ngSubmit)="EditWord(editWordForm)">
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>English</mat-label>
+        <input 
+          matInput
+          type="text"
+          name="wordEng"
+          #addFormWordEng="ngModel"
+          [(ngModel)]="word_en"
+          placeholder="English"
+          required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Türkçe</mat-label>
+        <input 
+          matInput
+          type="text"
+          name="wordTr"
+          #addFormWordTr="ngModel"
+          [(ngModel)]="word_tr"
+          placeholder="Türkçe"
+          required>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="example-full-width">
+        <input
+        matInput
+        type="text"
+        name="word_sentence"
+        #addFormWordSentence="ngModel"
+        [(ngModel)]="word_sentence"
+        placeholder="Add Sentence"
+        required>
+      </mat-form-field>
+        <input type="hidden" name="created_date" #addFormWordDate="ngModel" [(ngModel)]="createdDate">
+      <button mat-raised-button color="primary" class="btn-send">Add New Word</button>
+    </form>
+  </mat-card-content>
+</mat-card>

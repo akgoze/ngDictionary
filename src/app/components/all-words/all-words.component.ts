@@ -9,6 +9,11 @@ import { Word } from './../../models/Word';
 })
 export class AllWordsComponent implements OnInit {
   words: Word[];
+  editwords: Word = {
+    word_tr: 'Türkçe',
+    word_en: 'English',
+    word_sentece: 'Yeni bir cümle'
+  };
 
   showEditWord: boolean = true;
   constructor(private wordService: WordService) { }

@@ -5,3 +5,32 @@
   color: darkgrey;
   margin-left: 10px;
 }
+.word-item-text {
+  text-transform: capitalize;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.overlay .close-modal {
+  float: right;
+  color: #fff;
+  margin: 13px;
+}
+
+.modal-edit-words {
+  width: 86%;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  margin: auto;
+}
+.mat-form-field {
+  width: 100%;
+}
