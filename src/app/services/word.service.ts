@@ -23,6 +23,7 @@ export class WordService {
     this.words = this.wordCollection.snapshotChanges().pipe(
       map(actions => actions.map(a => {
         const data = a.payload.doc.data() as Word;
+        data.id = a.payload.doc.id;
         return data;
       }))
     );
