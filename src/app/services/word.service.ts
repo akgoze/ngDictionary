@@ -29,8 +29,13 @@ export class WordService {
 
     return this.words;
   }
+
+
   newWord(word: Word) {
     this.wordCollection.add(word);
   }
+
+  updateWord(word: Word) {
+    this.wordCollection.doc(word.id).update(word);
   }
 }

@@ -9,19 +9,31 @@ import { Word } from './../../models/Word';
 })
 export class AllWordsComponent implements OnInit {
   words: Word[];
-  editwords: Word = {
-    word_tr: 'Türkçe',
-    word_en: 'English',
-    word_sentece: 'Yeni bir cümle'
+  word: Word = {
+    id: '',
+    word_tr: '',
+    word_en: '',
+    word_sentece: ''
   };
 
-  showEditWord: boolean = true;
+  showEditWord: boolean = false;
+
   constructor(private wordService: WordService) { }
 
   ngOnInit() {
     this.wordService.getWords().subscribe(response => {
       return this.words = response;
     });
+  }
+
+  updateCurrentWord({value, valid}: {value: Word, valid: boolean}) {
+    if (valid) {
+      this.wordService.updateWord(value);
+    }
+  }
+
+  editFunc(word) {
+    console.log(word);
   }
 
 }
