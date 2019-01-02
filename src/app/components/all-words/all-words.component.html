@@ -1,10 +1,10 @@
 <mat-list>
   <div *ngFor="let word of words">
     <mat-list-item>
-      <h4 mat-line class="word-item-text">{{word.word_en}} - {{word.word_tr}}
+      <h4 mat-line class="word-item-text">{{word.word_en}}
         <span class="example-spacer"></span>
         <mat-icon>delete_outline</mat-icon>
-        <mat-icon (click)="showEditWord = !showEditWord">edit_outline</mat-icon>
+        <mat-icon (click)="editFunc()">edit_outline</mat-icon>
       </h4>
     </mat-list-item>
     <mat-divider></mat-divider>
@@ -18,7 +18,7 @@
       <mat-icon aria-label="Close">close</mat-icon>
     </button>
   </mat-card-header>
-  {{editwords.word_tr}} - {{editwords.word_en}}
+  
   <mat-card-content>
     <form class="edit-word-form" #editWordForm="ngForm" (ngSubmit)="EditWord(editWordForm)">
       <mat-form-field appearance="outline" class="example-full-width">

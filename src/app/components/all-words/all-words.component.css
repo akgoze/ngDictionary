@@ -31,6 +31,13 @@
   display: inline-block;
   margin: auto;
 }
+.modal-edit-words .close-modal {
+  margin-right: -10px;
+}
+.modal-edit-words .btn-send {
+  width: 100%;
+  margin-bottom: 10px;
+}
 .mat-form-field {
   width: 100%;
 }
