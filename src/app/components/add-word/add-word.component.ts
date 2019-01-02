@@ -24,7 +24,6 @@ export class AddWordComponent implements OnInit {
   AddWord({value, valid}: {value: Word, valid: boolean}) {
     if (valid) {
       this.wordService.newWord(value);
-      console.log(`ADD WORD: ${value}`);
     }
   }
 }

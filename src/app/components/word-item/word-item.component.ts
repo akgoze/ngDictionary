@@ -22,6 +22,8 @@ export class WordItemComponent implements OnInit {
       const arrLength = response.length;
       const randNumber = Math.floor(Math.random() * (0 - arrLength) + arrLength);
 
+      console.log(response);
+      
       return this.words = Array(response[randNumber]);
     });
   }
