@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { WordItemComponent } from './components/word-item/word-item.component';
@@ -30,7 +31,6 @@ import { environment } from './../environments/environment';
     MatMenuModule,
     MatListModule
    } from '@angular/material';
-import { HomeComponent } from './components/home/home.component';
 
    const appRoutes: Routes = [
      { path: '', component: HomeComponent },
@@ -50,7 +50,7 @@ import { HomeComponent } from './components/home/home.component';
     AllWordsComponent,
     WordDetailComponent,
     AddWordComponent,
-    HomeComponent
+    HomeComponent,
     AllWordsComponent
   ],
   imports: [
