@@ -36,6 +36,10 @@ export class WordService {
     this.wordCollection.add(word);
   }
 
+  getSingleWord(wordId) {
+    this.afs.collection('words').doc(wordId).valueChanges();
+  }
+
   updateWord(word: Word) {
     this.wordCollection.doc(word.id).update(word);
   }
