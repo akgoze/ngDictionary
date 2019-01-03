@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { WordService } from './../../services/word.service';
 import { Word } from './../../models/Word';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-all-words',
@@ -13,12 +15,17 @@ export class AllWordsComponent implements OnInit {
     id: '',
     word_tr: '',
     word_en: '',
-    word_sentece: ''
+    word_sentence: ''
   };
+  createdDate: Date = new Date();
+  wordIds: string;
 
   showEditWord: boolean = false;
 
-  constructor(private wordService: WordService) { }
+  constructor(
+    private wordService: WordService,
+    private afs: AngularFirestore) {
+     }
 
   ngOnInit() {
     this.wordService.getWords().subscribe(response => {
@@ -32,8 +39,13 @@ export class AllWordsComponent implements OnInit {
     }
   }
 
-  editFunc(word) {
-    console.log(word);
+  editWordItem(wordId) {
+    this.showEditWord = !this.showEditWord;
+    this.afs.collection('words').doc(wordId).valueChanges().subscribe(response => {
+      return this.word = response;
+    });
+    this.wordIds = wordId;
+    this.createdDate = new Date();
   }
 
 }

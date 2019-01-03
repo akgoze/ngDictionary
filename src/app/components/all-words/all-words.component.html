@@ -4,7 +4,7 @@
       <h4 mat-line class="word-item-text">{{word.word_en}}
         <span class="example-spacer"></span>
         <mat-icon>delete_outline</mat-icon>
-        <mat-icon (click)="editFunc()">edit_outline</mat-icon>
+        <mat-icon (click)="editWordItem(word.id)">edit_outline</mat-icon>
       </h4>
     </mat-list-item>
     <mat-divider></mat-divider>
@@ -20,15 +20,15 @@
   </mat-card-header>
   
   <mat-card-content>
-    <form class="edit-word-form" #editWordForm="ngForm" (ngSubmit)="EditWord(editWordForm)">
+    <form class="edit-word-form" #editWordForm="ngForm" (ngSubmit)="updateCurrentWord(editWordForm)">
       <mat-form-field appearance="outline" class="example-full-width">
         <mat-label>English</mat-label>
         <input 
           matInput
           type="text"
-          name="wordEng"
+          name="word_en"
           #addFormWordEng="ngModel"
-          [(ngModel)]="word_en"
+          [(ngModel)]="word.word_en"
           placeholder="English"
           required>
       </mat-form-field>
@@ -37,9 +37,9 @@
         <input 
           matInput
           type="text"
-          name="wordTr"
+          name="word_tr"
           #addFormWordTr="ngModel"
-          [(ngModel)]="word_tr"
+          [(ngModel)]="word.word_tr"
           placeholder="Türkçe"
           required>
       </mat-form-field>
@@ -49,10 +49,11 @@
         type="text"
         name="word_sentence"
         #addFormWordSentence="ngModel"
-        [(ngModel)]="word_sentence"
+        [(ngModel)]="word.word_sentence"
         placeholder="Add Sentence"
         required>
       </mat-form-field>
+        <input type="hidden" name="id" #addFormWordId="ngModel" [(ngModel)]="wordIds">
         <input type="hidden" name="created_date" #addFormWordDate="ngModel" [(ngModel)]="createdDate">
       <button mat-raised-button color="primary" class="btn-send">Add New Word</button>
     </form>
