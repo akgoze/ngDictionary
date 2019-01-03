@@ -12,7 +12,7 @@ export class AddWordComponent implements OnInit {
   word: Word = {
     word_en: '',
     word_tr: '',
-    word_sentece: '',
+    word_sentence: '',
     created_date: new Date()
   };
   @ViewChild('addWordForm') form: any;
