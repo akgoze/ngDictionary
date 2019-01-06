@@ -1,0 +1,16 @@
+<mat-card class="login-modal">
+  <mat-card-header>  
+    <mat-card-title>Login Form</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form #LoginForm (ngSubmit)="login(LoginForm)">
+        <mat-form-field class="example-full-width">
+          <input type="email" name="email" matInput [(ngModel)]="email" placeholder="Email address">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input type="password" name="password" matInput [(ngModel)]="password" placeholder="Password">
+        </mat-form-field>
+      <button mat-raised-button color="primary" class="btn-login">LOGIN</button>
+    </form>
+  </mat-card-content>
+</mat-card>
