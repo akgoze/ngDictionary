@@ -43,4 +43,7 @@ export class WordService {
   updateWord(word: Word) {
     this.wordCollection.doc(word.id).update(word);
   }
+  deleteWord(wordId) {
+    this.wordCollection.doc(wordId).delete();
+  }
 }

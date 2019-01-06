@@ -3,7 +3,7 @@
     <mat-list-item>
       <h4 mat-line class="word-item-text">{{word.word_en}}
         <span class="example-spacer"></span>
-        <mat-icon>delete_outline</mat-icon>
+        <mat-icon (click)="deleteWordItem(word.id)">delete_outline</mat-icon>
         <mat-icon (click)="editWordItem(word.id)">edit_outline</mat-icon>
       </h4>
     </mat-list-item>

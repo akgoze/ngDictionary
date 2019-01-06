@@ -19,6 +19,7 @@ export class AllWordsComponent implements OnInit {
   };
   createdDate: Date = new Date();
   wordIds: string;
+  confirmModal: boolean;
 
   showEditWord: boolean = false;
 
@@ -36,6 +37,13 @@ export class AllWordsComponent implements OnInit {
   updateCurrentWord({value, valid}: {value: Word, valid: boolean}) {
     if (valid) {
       this.wordService.updateWord(value);
+    }
+  }
+  deleteWordItem(wordId) {
+    const confirmModal = confirm('Are you sure?');
+    console.log(confirmModal);
+    if (confirmModal) {
+      this.wordService.deleteWord(wordId);
     }
   }
 
