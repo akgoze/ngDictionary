@@ -23,6 +23,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from './../environments/environment';
 
+import { FlashMessagesModule } from 'angular2-flash-messages';
+
   import {
     MatButtonModule,
     MatToolbarModule,
@@ -75,6 +77,7 @@ import { environment } from './../environments/environment';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
+    FlashMessagesModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
     ),
