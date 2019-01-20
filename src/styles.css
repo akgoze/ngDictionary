@@ -72,3 +72,28 @@ app-word-item .mat-card {
   background-image: url('https://api.adorable.io/avatars/285/abott@adorable.png');
   background-size: cover;
 }
+#footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 9;
+  left: 0;
+}
+#footer .mat-icon-button {
+  margin: auto;
+}
+#footer .mat-icon-button .button-text {
+  display: block;
+  margin-top: -20px;
+}
+#footer .autorenew {
+  background: #3f51b5;
+  width: 96px;
+  height: 96px;
+  margin-top: -40px;
+}
+#footer .autorenew .mat-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+}
