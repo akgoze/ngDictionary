@@ -11,4 +11,22 @@
 </mat-card>
 
 
-<button mat-fab color="primary" class="btn-auto" (click)="autoRenew()"><mat-icon>autorenew</mat-icon></button>
+
+<mat-toolbar color="primary" id="footer">
+    <button mat-icon-button class="btn-footer">
+      <mat-icon aria-label="Add new word">edit</mat-icon>
+    </button>
+    <button mat-icon-button class="btn-footer">
+      <mat-icon aria-label="Add new word">delete</mat-icon>
+    </button>
+    <button mat-icon-button class="btn-footer autorenew" (click)="autoRenew()">
+      <mat-icon aria-label="Get new word">autorenew</mat-icon>
+    </button>
+    <button mat-icon-button class="btn-footer">
+      <mat-icon routerLink="add-word" aria-label="See all words">add_box</mat-icon>
+    </button>
+    <button mat-icon-button class="btn-footer">
+      <mat-icon routerLink="all-words" aria-label="See all words">format_list_bulleted</mat-icon>
+    </button>
+</mat-toolbar>
+<!-- <button mat-fab color="primary" class="btn-auto"><mat-icon>autorenew</mat-icon></button> -->
