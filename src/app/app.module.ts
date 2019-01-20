@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -21,6 +20,11 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+
+import { WordService } from './services/word.service';
+import { UserService } from './services/user.service';
+import { AuthService } from './services/auth.service';
+
 import { environment } from './../environments/environment';
 
 import { FlashMessagesModule } from 'angular2-flash-messages';
@@ -83,7 +87,7 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
     ),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [WordService, AuthService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
