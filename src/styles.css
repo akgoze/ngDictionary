@@ -46,3 +46,29 @@ app-word-item .mat-card {
   padding: 4px 8px;
   border-radius: 4px;
 }
+.profile-menu .mat-icon {
+  top: 4px;
+  position: relative;
+  margin-right: 4px;
+}
+.profile-item.mat-card {
+  margin: 32px 15px 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.profile-item .mat-card-header {
+  display: block;
+}
+.profile-item .mat-card-header-text {
+  width: auto;
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+}
+.profile-item .mat-card-avatar {
+  margin: auto;
+  width: 96px;
+  height: 96px;
+  background-image: url('https://api.adorable.io/avatars/285/abott@adorable.png');
+  background-size: cover;
+}
