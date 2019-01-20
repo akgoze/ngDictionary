@@ -13,8 +13,8 @@ app-word-item {
 app-word-item .mat-card {
   margin: 16px 0;
 }
-.mat-card-header,
-.mat-card-header .mat-card-header-text {
+.login-modal .mat-card-header,
+.login-modal .mat-card-header .mat-card-header-text {
   text-align: center;
   width: 100%;
 }
@@ -28,4 +28,21 @@ app-word-item .mat-card {
 }
 .modal-header .btn-send {
   width: 100%;
+}
+.flash-messages {
+  margin-top: 16px;
+}
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: 4px 8px;
+  border-radius: 4px;
 }

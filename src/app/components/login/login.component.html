@@ -3,7 +3,7 @@
     <mat-card-title>Login Form</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <form #LoginForm (ngSubmit)="login(LoginForm)">
+    <form #LoginForm (ngSubmit)="onSubmit()">
         <mat-form-field class="example-full-width">
           <input type="email" name="email" matInput [(ngModel)]="email" placeholder="Email address">
         </mat-form-field>
@@ -11,6 +11,7 @@
           <input type="password" name="password" matInput [(ngModel)]="password" placeholder="Password">
         </mat-form-field>
       <button mat-raised-button color="primary" class="btn-login">LOGIN</button>
+      <flash-messages></flash-messages>
     </form>
   </mat-card-content>
 </mat-card>
