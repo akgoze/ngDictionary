@@ -10,10 +10,10 @@ export class AuthService {
   constructor(
     private afAuth: AngularFireAuth,
   ) { }
-
-  login(email: string, password: string) {
-    this.afAuth.auth.signInWithEmailAndPassword(email, password).then(res => {
-      console.log('DONE ' + res);
+  getAuth() {
+    return this.afAuth.authState.pipe(
+      map(auth => auth)
+    );
   }
   login(email, password) {
     return new Promise((resolve, reject) => {
