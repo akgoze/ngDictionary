@@ -1,17 +1,17 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row>
-      <div class="logo" routerLink="/">      
-        <mat-icon>spellcheck</mat-icon>
-        <span>&nbsp;ngDictionary</span>
-      </div>
-      <span class="example-spacer"></span>
-      <button mat-icon-button [matMenuTriggerFor]="matMenu">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <mat-menu #matMenu>
-        <button routerLink="add-word" mat-menu-item>Add new</button>
-        <button routerLink="all-words" mat-menu-item>All words</button>
-        <button routerLink="profile" mat-menu-item>My Profile</button>
-      </mat-menu>
-    </mat-toolbar-row>
-  </mat-toolbar>
+  <mat-toolbar-row>
+    <div class="logo" routerLink="/">
+      <mat-icon>spellcheck</mat-icon>
+      <span>&nbsp;ngDictionary</span>
+    </div>
+    <span class="example-spacer"></span>
+    <span class="profile-menu" routerLink="register" *ngIf="!loginStatus">
+      <mat-icon>account_circle</mat-icon> 
+      <span class="text">Register</span>
+    </span>
+    <span class="profile-menu" routerLink="profile" *ngIf="loginStatus">
+      <mat-icon>account_circle</mat-icon> 
+      <span class="text">Fatih</span>
+    </span>
+  </mat-toolbar-row>
+</mat-toolbar>
